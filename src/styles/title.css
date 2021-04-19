@@ -1,0 +1,8 @@
+.title {
+  background-color: none;
+  margin: auto;
+  width: 500;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

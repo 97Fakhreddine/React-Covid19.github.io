@@ -1,0 +1,10 @@
+.App {
+  margin: auto;
+  position: absolute;
+  padding: 2%;
+  background-color: none;
+  height: 550px;
+}
+.bullet {
+  margin: 0 2px;
+}
