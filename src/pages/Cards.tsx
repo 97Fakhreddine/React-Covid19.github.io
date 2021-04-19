@@ -1,7 +1,7 @@
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import cx from "classnames";
-
+import { Dimmer, Loader, Segment, Image } from "semantic-ui-react";
 // const styles = require("../style/cards.css");
 // import * as style from "../styles/cards.css";
 
@@ -9,7 +9,16 @@ export const Cards = ({
   data: { confirmed, recovered, deaths, lastUpdate },
 }: any): JSX.Element => {
   if (!confirmed) {
-    return <h1>404 NOT FOUND</h1>;
+    return (
+      <div className="ui segment">
+        <div className="ui active inverted dimmer">
+          <div className="ui large text loader">Loading</div>
+        </div>
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
+    );
   }
 
   return (
@@ -20,7 +29,7 @@ export const Cards = ({
           xs={12}
           md={3}
           component={Card}
-          // className={cx(styles.card, styles.infected)} 
+          // className={cx(styles.card, styles.infected)}
         >
           <CardContent
             style={{ backgroundColor: " #f48a04", color: "White", padding: 20 }}
