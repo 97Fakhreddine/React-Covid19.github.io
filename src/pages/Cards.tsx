@@ -1,9 +1,8 @@
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
 import cx from "classnames";
-import { Dimmer, Loader, Segment, Image } from "semantic-ui-react";
-// const styles = require("../style/cards.css");
-// import * as style from "../styles/cards.css";
+
+import "../styles/cards.css";
 
 export const Cards = ({
   data: { confirmed, recovered, deaths, lastUpdate },
@@ -24,15 +23,14 @@ export const Cards = ({
   return (
     <div className="App">
       <Grid container spacing={3} justify="center">
-        <Grid
-          item
-          xs={12}
-          md={3}
-          component={Card}
-          // className={cx(styles.card, styles.infected)}
-        >
+        <Grid item xs={12} md={3} component={Card}>
           <CardContent
-            style={{ backgroundColor: " #f48a04", color: "White", padding: 20 }}
+            style={{
+              backgroundColor: " #f48a04",
+              color: "White",
+              padding: 20,
+              position: "relative",
+            }}
           >
             <Typography variant="h5" color="primary" gutterBottom>
               Infected
@@ -50,15 +48,14 @@ export const Cards = ({
             </Typography>
           </CardContent>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={3}
-          component={Card}
-          // className={cx(styles.card, styles.recovered)}
-        >
+        <Grid item xs={12} md={3} component={Card}>
           <CardContent
-            style={{ backgroundColor: " #02ab02", color: "White", padding: 20 }}
+            style={{
+              backgroundColor: " #02ab02",
+              color: "White",
+              padding: 20,
+              position: "relative",
+            }}
           >
             <Typography variant="h5" color="primary" gutterBottom>
               Recovered
@@ -76,15 +73,14 @@ export const Cards = ({
             </Typography>
           </CardContent>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={3}
-          component={Card}
-          // className={cx(styles.card, styles.deaths)}
-        >
+        <Grid item xs={12} md={3} component={Card}>
           <CardContent
-            style={{ backgroundColor: " #bf0325", color: "White", padding: 20 }}
+            style={{
+              backgroundColor: " #bf0325",
+              color: "White",
+              padding: 20,
+              position: "relative",
+            }}
           >
             <Typography variant="h5" color="primary" gutterBottom>
               Deaths

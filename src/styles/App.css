@@ -3,18 +3,22 @@ body {
 }
 .App {
   background-color: none;
-  margin: auto;
-  width: 500;
-  display: flex;
-  flex-direction: column;
+  padding: 5%;
+  gap: normal;
+  margin: 10%;
+  width: 100%;
+  display: block;
+  flex-direction: wrap;
   align-items: center;
 }
 .card-container {
   margin-top: 2%;
   background-color: none;
 }
-/* .header {
-  background-image: url("../images/background.jpeg");
-  image-resolution: inherit;
-  background-repeat: no-repeat;
-} */
+.header {
+  display: block;
+  width: 100%;
+  display: block;
+  flex-direction: wrap;
+  margin-bottom: 5%;
+}

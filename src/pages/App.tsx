@@ -3,6 +3,8 @@ import "../styles/App.css";
 import Title from "./Title";
 import { Cards } from "./Cards";
 import { fetchData } from "../config/api";
+import Char from "./Chars";
+import Country from "./Country";
 class App extends React.Component {
   state = {
     data: {},
@@ -23,13 +25,15 @@ class App extends React.Component {
   render() {
     const { data, country } = this.state;
     return (
-      <div className="app">
+      <div className="App">
         <div className="header">
           <div>
             <Title />
-          </div>
-          <div className="card-container">
+            <Country handleCountryChange={this.handleCountryChange} />
             <Cards data={data} />
+          </div>
+          <div>
+            <Char data={data} country={country} />
           </div>
         </div>
       </div>
