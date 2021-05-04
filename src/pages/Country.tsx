@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NativeSelect, FormControl } from "@material-ui/core";
+import { FormControl } from "@material-ui/core";
 import Select from "@material-ui/core/Select";
 import { fetchCountries } from "../config/api";
 import InputLabel from "@material-ui/core/InputLabel";
@@ -22,16 +22,14 @@ const Countries = ({ handleCountryChange }: any) => {
       <Grid item xs={12}>
         <FormControl
           style={{ width: "300px", marginBottom: 20 }}
-          variant="outlined"
-        >
-          <InputLabel id="demo-simple-select-outlined-label">
+          variant='outlined'>
+          <InputLabel id='demo-simple-select-outlined-label'>
             Worldwide
           </InputLabel>
           <Select
-            label="WorldWide"
-            onChange={(e) => handleCountryChange(e.target.value)}
-          >
-            <option value="">WorldWide</option>
+            label='WorldWide'
+            onChange={(e) => handleCountryChange(e.target.value)}>
+            <option value=''>WorldWide</option>
             {countries.map((country, i) => (
               <option key={i} value={country}>
                 {country}

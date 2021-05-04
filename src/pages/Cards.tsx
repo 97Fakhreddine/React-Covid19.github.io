@@ -1,6 +1,5 @@
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import CountUp from "react-countup";
-import cx from "classnames";
 
 import "../styles/cards.css";
 
@@ -9,9 +8,9 @@ export const Cards = ({
 }: any): JSX.Element => {
   if (!confirmed) {
     return (
-      <div className="ui segment">
-        <div className="ui active inverted dimmer">
-          <div className="ui large text loader">Loading</div>
+      <div className='ui segment'>
+        <div className='ui active inverted dimmer'>
+          <div className='ui large text loader'>Loading</div>
         </div>
         <p></p>
         <p></p>
@@ -21,8 +20,8 @@ export const Cards = ({
   }
 
   return (
-    <div className="App">
-      <Grid container spacing={3} justify="center">
+    <div className='App'>
+      <Grid container spacing={3} justify='center'>
         <Grid item xs={12} md={3} component={Card}>
           <CardContent
             style={{
@@ -30,20 +29,19 @@ export const Cards = ({
               color: "White",
               padding: 20,
               position: "relative",
-            }}
-          >
-            <Typography variant="h5" color="primary" gutterBottom>
+            }}>
+            <Typography variant='h5' color='primary' gutterBottom>
               Infected
             </Typography>
-            <Typography variant="h4" component="h2">
+            <Typography variant='h4' component='h2'>
               <CountUp
                 start={0}
                 end={confirmed.value}
                 duration={2.75}
-                separator=","
+                separator=','
               />
             </Typography>
-            <Typography color="primary">
+            <Typography color='primary'>
               {new Date(lastUpdate).toDateString()}
             </Typography>
           </CardContent>
@@ -55,20 +53,19 @@ export const Cards = ({
               color: "White",
               padding: 20,
               position: "relative",
-            }}
-          >
-            <Typography variant="h5" color="primary" gutterBottom>
+            }}>
+            <Typography variant='h5' color='primary' gutterBottom>
               Recovered
             </Typography>
-            <Typography variant="h4" component="h2">
+            <Typography variant='h4' component='h2'>
               <CountUp
                 start={0}
                 end={recovered.value}
                 duration={2.75}
-                separator=","
+                separator=','
               />
             </Typography>
-            <Typography color="primary">
+            <Typography color='primary'>
               {new Date(lastUpdate).toDateString()}
             </Typography>
           </CardContent>
@@ -80,20 +77,19 @@ export const Cards = ({
               color: "White",
               padding: 20,
               position: "relative",
-            }}
-          >
-            <Typography variant="h5" color="primary" gutterBottom>
+            }}>
+            <Typography variant='h5' color='primary' gutterBottom>
               Deaths
             </Typography>
-            <Typography variant="h4" component="h2">
+            <Typography variant='h4' component='h2'>
               <CountUp
                 start={0}
                 end={deaths.value}
                 duration={2.75}
-                separator=","
+                separator=','
               />
             </Typography>
-            <Typography color="primary">
+            <Typography color='primary'>
               {new Date(lastUpdate).toDateString()}
             </Typography>
           </CardContent>

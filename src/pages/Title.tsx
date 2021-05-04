@@ -26,15 +26,16 @@ const useStyles = makeStyles((theme: Theme) =>
 const Title: React.FC = () => {
   const classes = useStyles();
   return (
-    <div className="title">
+    <div className='title'>
       <img
+        alt='logo...'
         src={Logo}
         style={{ width: 400, padding: 30, display: "inline-block" }}
       />
       <List className={classes.root}>
         <ListItem>
           <ListItemText
-            primary="COVID-19 TODAY"
+            primary='COVID-19 TODAY'
             style={{
               marginLeft: "30%",
               fontFamily: "monospace",
