@@ -25,8 +25,8 @@ class App extends React.Component {
   render() {
     const { data, country } = this.state;
     return (
-      <div className="App">
-        <div className="header">
+      <div className='App'>
+        <div className='header'>
           <div>
             <Title />
             <Country handleCountryChange={this.handleCountryChange} />
